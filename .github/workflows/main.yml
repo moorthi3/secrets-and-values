@@ -1,0 +1,12 @@
+name : secrets and values
+  on:
+    push:
+        branches : ["main"]
+    jobs :
+        build : 
+            runs-on : ubuntu-latest
+    steps : 
+         -name : checkout repository
+          use : actions/checkout@v4
+         -name : basic workflow
+          use : echo"secret created successfully"
